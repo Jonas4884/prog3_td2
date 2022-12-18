@@ -12,7 +12,7 @@ import java.util.List;
 public class TeamService {
     private final TeamRepository teamRepository;
 
-    public List<TeamEntity> getAllteam (){
-        return teamRepository.findAll();
+    public List<?> getAllteam (){
+        return teamRepository.getallMatch();
     }
 }
