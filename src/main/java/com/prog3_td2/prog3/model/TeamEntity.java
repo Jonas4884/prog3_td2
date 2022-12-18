@@ -23,5 +23,6 @@ public class TeamEntity {
     private List<PlayerEntity> playerEntity;
 
     @OneToOne
+    @JoinColumn(name = "id", foreignKey = @ForeignKey(name = "fk_team1"))
     private TeamEntity teamEntity;
 }

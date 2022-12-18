@@ -1,0 +1,75 @@
+openapi: 3.0.0
+info:
+  version: "latest"
+  title: PROG3 - TD
+paths:
+  /match:
+    get:
+      tags:
+        - Match
+      summary: get all match
+      operationId: getMatch
+      responses:
+        '200':
+          description: List of match
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/match'
+        '500':
+          description: Internal server error
+  /team:
+    get:
+      tags:
+        - team
+      summary: get all team
+      responses:
+        '200':
+          description: description of team
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/team'
+        '500':
+          description: Internal server error
+components:
+  schemas:
+    match:
+      type: object
+      properties:
+        id:
+          type: integer
+        datetime:
+          type: string
+        adverse:
+          type: object
+          properties:
+            id :
+              type : string
+            name :
+              type : string
+    team:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: integer
+        player:
+          type : array
+          items:
+            id :
+              type: integer
+            name :
+              type: string
+        sponsor:
+          type: object
+          properties:
+            id :
+              type: integer
+            name :
+              type: string

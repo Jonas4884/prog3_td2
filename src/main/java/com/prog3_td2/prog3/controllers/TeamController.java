@@ -12,9 +12,9 @@ import java.util.List;
 @AllArgsConstructor
 public class TeamController {
     private final TeamService service;
-
     @GetMapping("/match")
-    public List<?> getAllEntities(){
-        return service.getAllteam();
+    public List<TeamEntity> getAllMatch(){
+        return service.getAllTeams();
     }
+
 }
