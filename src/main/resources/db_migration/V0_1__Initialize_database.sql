@@ -9,7 +9,7 @@ create table if not exists team (
     team_entity_id integer,
     sponsor_id integer,
     PRIMARY KEY(id),
-   CONSTRAINT fk_sponsor_have_team FOREIGN KEY (sponsor_id) REFERENCES sponsor(id),
+    CONSTRAINT fk_sponsor_have_team FOREIGN KEY (sponsor_id) REFERENCES sponsor(id),
     CONSTRAINT fk_team_have FOREIGN KEY (team_entity_id) REFERENCES team(id)
 );
 
