@@ -1,17 +1,23 @@
 package com.prog3_td2.prog3.controllers.formatter;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 
 public class hourFormatter {
 
-    public String formatter(LocalDateTime localDateTime){
+    public static String customformat(LocalDateTime localDateTime){
        int hour = localDateTime.getHour();
        int minute = localDateTime.getMinute();
-       int seconde = localDateTime.getSecond();
+       int second = localDateTime.getSecond();
 
-        LocalDate localDate = localDateTime.toLocalDate();
-        String hours = localDate.toString()+" "+hour+":"+minute+":"+":"+seconde;
-        return  hours;
+       LocalDate localDate1 = localDateTime.toLocalDate();
+        return   localDate1.toString()+" "+hour+":"+minute+":"+second;
     }
 }

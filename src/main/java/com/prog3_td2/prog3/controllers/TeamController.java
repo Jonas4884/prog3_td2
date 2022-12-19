@@ -1,5 +1,7 @@
 package com.prog3_td2.prog3.controllers;
 
+import com.prog3_td2.prog3.Mapper.PlayMapper;
+import com.prog3_td2.prog3.controllers.response.PlayResponse;
 import com.prog3_td2.prog3.model.PlayAgainst;
 import com.prog3_td2.prog3.model.TeamEntity;
 import com.prog3_td2.prog3.service.TeamService;
@@ -14,8 +16,8 @@ import java.util.List;
 public class TeamController {
     private final TeamService service;
     @GetMapping("/match")
-    public List<PlayAgainst> getAllMatch(){
-        return service.getAllTeams();
+    public List<PlayResponse> getAllMatch(){
+        return service.getAllTeams().stream().map(PlayMapper::toRest).toList();
     }
 
 }
