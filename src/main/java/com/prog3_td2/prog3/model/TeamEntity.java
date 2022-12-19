@@ -18,11 +18,4 @@ public class TeamEntity {
     @Id
     private Long id;
     private String name;
-
-    @OneToMany(mappedBy = "id")
-    private List<PlayerEntity> playerEntity;
-
-    @OneToOne
-    @JoinColumn(name = "id", foreignKey = @ForeignKey(name = "fk_team1"))
-    private TeamEntity teamEntity;
 }

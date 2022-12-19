@@ -8,8 +8,8 @@ import java.util.List;
 
 public interface TeamRepository extends JpaRepository<TeamEntity,Long> {
 
-    @Query(value="select t from play_against p inner join team t on t.id=p.team_1_id",nativeQuery = true)
-    List<?> getallMatch1() ;
-    @Query(value="select t from play_against p inner join team t on t.id=p.team_2_id",nativeQuery = true)
-    List<?> getallMatch2() ;
+//    @Query(value="select t from team p inner join play_against t on p.id=t.team_1_id",nativeQuery = true)
+//    List<TeamEntity> getallMatch1() ;
+//    @Query(value="select t from team p inner join play_against t on p.id=t.team_2_id",nativeQuery = true)
+//    List<TeamEntity> getallMatch2() ;
 }

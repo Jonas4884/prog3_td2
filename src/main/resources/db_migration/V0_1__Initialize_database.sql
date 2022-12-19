@@ -25,6 +25,7 @@ create table if not exists player (
 );
 
 create table if not exists play_against (
+    id serial,
     datetime timestamp,
     stadium varchar,
     team_1_id integer,
