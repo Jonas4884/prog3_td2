@@ -1,5 +1,6 @@
 package com.prog3_td2.prog3.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,7 +19,8 @@ public class PlayerEntity {
     private String name;
     private int number;
 
-    @OneToOne
-    @JoinColumn(name = "team_entity_id")
+    @ManyToOne
+    @JoinColumn(name = "team_entity_id",foreignKey = @ForeignKey(name = "fk_team"))
+    @JsonIgnore
     private TeamEntity team;
 }

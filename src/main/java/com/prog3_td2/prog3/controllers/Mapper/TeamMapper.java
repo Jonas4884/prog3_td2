@@ -1,0 +1,15 @@
+package com.prog3_td2.prog3.controllers.Mapper;
+
+import com.prog3_td2.prog3.controllers.response.TeamResponse;
+import com.prog3_td2.prog3.model.TeamEntity;
+
+public class TeamMapper {
+    public static TeamResponse toRest (TeamEntity team){
+        return TeamResponse.builder()
+                .id(team.getId())
+                .name(team.getName())
+                .Player(team.getPlayerEntity().stream().map(SponsorisedMapper::toPlayerName).toList())
+                .sponsors(team.getSponsorEntity().stream().map(SponsorisedMapper::toSponsorName).toList())
+                .build();
+    }
+}

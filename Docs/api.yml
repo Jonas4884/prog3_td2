@@ -1,75 +1,97 @@
-openapi: 3.0.0
+openapi: 3.0.3
 info:
-  version: "latest"
-  title: PROG3 - TD
+  title: Team matches management API
+  description: Team matches management API
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8080'
 paths:
-  /match:
+  /matches:
     get:
+      summary: get all matches
       tags:
-        - Match
-      summary: get all match
-      operationId: getMatch
+        - Matches
+      operationId: getMatches
       responses:
-        '200':
-          description: List of match
+        200:
+          description: list of all matches
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/match'
-        '500':
-          description: Internal server error
-  /team:
+                  $ref: '#/components/schemas/Match'
+  /players:
     get:
+      summary: get all players
       tags:
-        - team
-      summary: get all team
+        - Players
+      operationId: getPlayers
       responses:
-        '200':
-          description: description of team
+        200:
+          description: list of all players
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/team'
-        '500':
-          description: Internal server error
+                  $ref: '#/components/schemas/Player'
+  /teams:
+    get:
+      summary: get all teams
+      tags:
+        - Teams
+      operationId: getTeams
+      responses:
+        200:
+          description: list of all teams
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Team'
 components:
   schemas:
-    match:
-      type: object
-      properties:
-        id:
-          type: integer
-        datetime:
-          type: string
-        adverse:
-          type: object
-          properties:
-            id :
-              type : string
-            name :
-              type : string
-    team:
+    Player:
       type: object
       properties:
         id:
           type: integer
         name:
+          type: string
+    Team:
+      type: object
+      properties:
+        id:
           type: integer
-        player:
-          type : array
+        name:
+          type: string
+        sponsors:
+          type: array
           items:
-            id :
-              type: integer
-            name :
-              type: string
-        sponsor:
-          type: object
-          properties:
-            id :
-              type: integer
-            name :
-              type: string
+            $ref: '#/components/schemas/Sponsor'
+        players:
+          type: array
+          items:
+            $ref: '#/components/schemas/Player'
+
+    Sponsor:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+    Match:
+      type: object
+      properties:
+        id:
+          type: string
+        Home:
+          $ref: '#/components/schemas/Team'
+        Away:
+          $ref: '#/components/schemas/Team'
+        datetime:
+          type: string
+          format: date-time
