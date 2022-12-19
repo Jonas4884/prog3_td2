@@ -1,9 +1,7 @@
 package com.prog3_td2.prog3.controllers;
 
-import com.prog3_td2.prog3.Mapper.SponsorMapper;
+import com.prog3_td2.prog3.controllers.Mapper.SponsorMapper;
 import com.prog3_td2.prog3.controllers.response.SponsorResponse;
-import com.prog3_td2.prog3.model.SponsorEntity;
-import com.prog3_td2.prog3.repository.SponsorRepository;
 import com.prog3_td2.prog3.service.SponsorService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
