@@ -8,8 +8,8 @@ public class TeamMapper {
         return TeamResponse.builder()
                 .id(team.getId())
                 .name(team.getName())
-                .Player(team.getPlayerEntity().stream().map(SponsorisedMapper::toPlayerName).toList())
-                .sponsors(team.getSponsorEntity().stream().map(SponsorisedMapper::toSponsorName).toList())
+                .Player(team.getPlayerEntity().stream().map(PlayerMatchMapper::toRest).toList())
+                .sponsors(team.getSponsorEntity())
                 .build();
     }
 }

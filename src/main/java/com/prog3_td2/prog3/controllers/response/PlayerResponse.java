@@ -12,5 +12,4 @@ import lombok.NoArgsConstructor;
 public class PlayerResponse {
     private Long id;
     private String name;
-    private String team;
 }
