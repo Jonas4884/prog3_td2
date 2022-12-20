@@ -31,9 +31,9 @@ insert into player (id, name, number,team_entity_id) values (16, 'Ter testgen', 
 insert into player (id, name, number,team_entity_id) values (17, 'morata', 28, 5);
 insert into player (id, name, number,team_entity_id) values (18, 'Nkunku', 35, 5);
 insert into player (id, name, number,team_entity_id) values (19, 'Drogba', 94, 5);
-insert into player (id, name, number,team_entity_id) values (20, 'Lagazette', 30, 5);
-insert into player (id, name, number,team_entity_id) values (21, 'Jorghino', 52, 5);
-insert into player (id, name, number,team_entity_id) values (22, 'Jorghino', 52, 5);
+insert into player (id, name, number,team_entity_id) values (20, 'Lagazette', 31, 5);
+insert into player (id, name, number,team_entity_id) values (21, 'Carolus', 55, 5);
+insert into player (id, name, number,team_entity_id) values (22, 'Jorghino', 51, 5);
 alter sequence player_id_seq restart with 23;
 
 insert into play_against (id,datetime, stadium, team_1_id, team_2_id) values (1,'2022/01/12 02:20:25', 'LSLS Stadium', 1, 3);
