@@ -4,6 +4,7 @@ import com.prog3_td2.prog3.controllers.Mapper.PlayMapper;
 import com.prog3_td2.prog3.controllers.Mapper.TeamMapper;
 import com.prog3_td2.prog3.controllers.response.PlayResponse;
 import com.prog3_td2.prog3.controllers.response.TeamResponse;
+import com.prog3_td2.prog3.model.PlayAgainst;
 import com.prog3_td2.prog3.model.TeamEntity;
 import com.prog3_td2.prog3.service.TeamService;
 import lombok.AllArgsConstructor;
@@ -17,17 +18,22 @@ import java.util.List;
 @AllArgsConstructor
 public class TeamController {
     private final TeamService service;
-    @GetMapping("/match")
+
+    @GetMapping("/matches")
     public List<PlayResponse> getAllMatch(){
         return service.getAllMatch().stream().map(PlayMapper::toRest).toList();
+    }  @GetMapping("/allTeam")
+    public List<TeamResponse> getAllMatches(){
+        return service.getAllTeams().stream().map(TeamMapper::toRest).toList();
     }
 
-    @GetMapping("/team")
+
+    @GetMapping("/teams")
     public List<TeamResponse>getAllTeams(){
         return service.getAllTeams().stream().map(TeamMapper::toRest).toList();
     }
 
-    @GetMapping("/team/{team}")
+    @GetMapping("/teams/{team}")
     public TeamResponse getTeamByName(@PathVariable String team) {
         return service.getTeamByName(team);
     }

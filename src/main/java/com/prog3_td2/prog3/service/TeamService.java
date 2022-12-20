@@ -1,5 +1,6 @@
 package com.prog3_td2.prog3.service;
 
+import com.prog3_td2.prog3.controllers.Mapper.PlayerMatchMapper;
 import com.prog3_td2.prog3.controllers.Mapper.SponsorisedMapper;
 import com.prog3_td2.prog3.controllers.response.TeamResponse;
 import com.prog3_td2.prog3.model.PlayAgainst;
@@ -30,8 +31,8 @@ public class TeamService {
         TeamEntity team = teamRepository.findByName(name);
         teamResponse.setId(team.getId());
         teamResponse.setName(team.getName());
-        teamResponse.setPlayer(team.getPlayerEntity().stream().map(SponsorisedMapper::toPlayerName).toList());
-        teamResponse.setSponsors(team.getSponsorEntity().stream().map(SponsorisedMapper::toSponsorName).toList());
+        teamResponse.setPlayer(team.getPlayerEntity().stream().map(PlayerMatchMapper::toRest).toList());
+        teamResponse.setSponsors(team.getSponsorEntity());
 
         return teamResponse;
     }

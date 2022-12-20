@@ -1,5 +1,7 @@
 package com.prog3_td2.prog3.controllers.response;
 
+import com.prog3_td2.prog3.controllers.Mapper.PlayerMatchMapper;
+import com.prog3_td2.prog3.model.SponsorEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,6 +15,6 @@ import java.util.List;
 public class TeamResponse {
     private Long id;
     private String name;
-    private List<String> sponsors;
-    private List<String> Player;
+    private List<SponsorEntity> sponsors;
+    private List<PlayMatchResponse> Player;
 }

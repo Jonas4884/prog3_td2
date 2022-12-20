@@ -1,20 +1,16 @@
 package com.prog3_td2.prog3.controllers.response;
 
-import com.prog3_td2.prog3.model.TeamEntity;
+import com.prog3_td2.prog3.model.PlayerEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Builder
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
-public class PlayResponse {
+public class PlayMatchResponse {
     private Long id;
-    private  String datetime;
-    private TeamResponse Home;
-    private TeamResponse Away;
+    private String Name;
 }

@@ -14,7 +14,7 @@ import java.util.List;
 public class PlayerController {
     private final PlayerService service;
 
-    @GetMapping("/allPlayer")
+    @GetMapping("/players")
     public List<PlayerResponse> getAllPlayer(){
         return service.playerEntityList().stream().map(PlayerMapper::toRest).toList();
     }
