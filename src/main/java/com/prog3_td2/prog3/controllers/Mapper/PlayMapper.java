@@ -2,8 +2,13 @@ package com.prog3_td2.prog3.controllers.Mapper;
 
 import com.prog3_td2.prog3.controllers.formatter.hourFormatter;
 import com.prog3_td2.prog3.controllers.response.PlayResponse;
+import com.prog3_td2.prog3.controllers.response.PlayerResponse;
+import com.prog3_td2.prog3.controllers.response.ScoreResponse;
 import com.prog3_td2.prog3.controllers.response.TeamResponse;
 import com.prog3_td2.prog3.model.PlayAgainst;
+import com.prog3_td2.prog3.model.Score;
+
+import java.util.List;
 
 public class PlayMapper {
     public static PlayResponse toRest(PlayAgainst playAgainst){
@@ -16,6 +21,7 @@ public class PlayMapper {
                 .datetime(PlayingTime)
                 .Home(team1)
                 .Away(team2)
+                .score(playAgainst.getScore().stream().map(ScoreMapper::toRest).toList())
                 .build();
     }
 }

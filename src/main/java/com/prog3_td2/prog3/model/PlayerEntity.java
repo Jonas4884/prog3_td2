@@ -23,4 +23,6 @@ public class PlayerEntity {
     @JoinColumn(name = "team_entity_id",foreignKey = @ForeignKey(name = "fk_team"))
     @JsonIgnore
     private TeamEntity team;
+
+    private String post;
 }
