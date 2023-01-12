@@ -13,6 +13,10 @@ create table if not exists team (
     CONSTRAINT fk_team_have FOREIGN KEY (team_entity_id) REFERENCES team(id)
 );
 
+create table if not exists goal_entity(
+    id serial,
+    primary key (id)
+);
 
 
 create table if not exists player (
@@ -31,8 +35,10 @@ create table if not exists play_against (
     stadium varchar,
     team_1_id integer,
     team_2_id integer,
+    goal_id integer,
     constraint fk_team1 foreign key(team_1_id) references team(id),
-    constraint fk_team2 foreign key(team_2_id) references team(id)
+    constraint fk_team2 foreign key(team_2_id) references team(id),
+    constraint fk_goal foreign key(goal_id) references goal_entity(id)
 );
 
 create table if not exists have (
@@ -40,4 +46,13 @@ create table if not exists have (
     sponsor_id integer,
     constraint fk_team_have foreign key(team_id) references team(id),
     constraint fk_sponsor_have foreign key(sponsor_id) references sponsor(id)
+);
+
+create table if not exists score (
+    id serial,
+    player_id integer,
+    goal_id integer,
+    scoring_time timestamp,
+    constraint fk_scorer foreign key(player_id) references player(id),
+    constraint fk_goal foreign key(goal_id) references goal_entity(id)
 );

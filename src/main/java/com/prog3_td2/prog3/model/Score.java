@@ -1,10 +1,7 @@
 package com.prog3_td2.prog3.model;
 
 import com.google.type.DateTime;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,5 +23,7 @@ public class Score {
     public PlayerEntity player;
     @OneToOne
     public GoalEntity goal;
+
+    @Column(name = "scoring_time")
     public LocalDateTime scoringTime;
 }

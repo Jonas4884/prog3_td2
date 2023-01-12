@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -29,6 +30,7 @@ public class PlayAgainst {
     @JoinColumn(name = "team_2_id",foreignKey = @ForeignKey(name = "fk_team2"))
     private TeamEntity team2;
 
-    @OneToOne
-    private Score score;
+    @OneToMany
+    @JoinColumn(name = "goal_id",foreignKey = @ForeignKey(name = "fk_goal"))
+    private List<Score> score;
 }

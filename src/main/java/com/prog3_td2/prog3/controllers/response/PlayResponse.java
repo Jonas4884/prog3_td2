@@ -1,5 +1,6 @@
 package com.prog3_td2.prog3.controllers.response;
 
+import com.prog3_td2.prog3.model.Score;
 import com.prog3_td2.prog3.model.TeamEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,4 +18,6 @@ public class PlayResponse {
     private  String datetime;
     private TeamResponse Home;
     private TeamResponse Away;
+
+    private List<Score> score;
 }
