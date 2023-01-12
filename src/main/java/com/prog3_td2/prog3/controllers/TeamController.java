@@ -19,7 +19,7 @@ import java.util.List;
 public class TeamController {
     private final TeamService service;
 
-    @GetMapping("/matches")
+    @GetMapping("/match")
     public List<PlayResponse> getAllMatch(){
         return service.getAllMatch().stream().map(PlayMapper::toRest).toList();
     }  @GetMapping("/allTeam")

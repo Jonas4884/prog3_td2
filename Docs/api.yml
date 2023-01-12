@@ -6,7 +6,7 @@ info:
 servers:
   - url: 'http://localhost:8080'
 paths:
-  /matches:
+  /match:
     get:
       summary: get all matches
       tags:
@@ -60,6 +60,10 @@ components:
           type: integer
         name:
           type: string
+        team:
+          type: array
+          items:
+            $ref: '#/components/schemas/Team'
     Team:
       type: object
       properties:
@@ -75,7 +79,17 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Player'
-
+    Goal:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: array
+          items:
+            $ref: '#/components/schemas/Player'
+        goal's time:
+          type: integer
     Sponsor:
       type: object
       properties:
@@ -95,3 +109,20 @@ components:
         datetime:
           type: string
           format: date-time
+        score:
+          $ref: '#/components/schemas/Score'
+        goal:
+          type: array
+          items:
+            $ref: '#/components/schemas/Goal'
+    Score:
+      type: object
+      properties:
+        id:
+          type: integer
+        team a:
+          type: string
+        team b:
+          type: string
+
+
