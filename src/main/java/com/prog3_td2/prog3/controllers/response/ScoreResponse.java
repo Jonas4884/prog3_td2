@@ -12,8 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class ScoreResponse {
     private Long id;
-    private String team;
-    private PlayerResponse playResponse;
+    private PlayMatchResponse scorer;
 
-    private LocalDateTime localDateTime;
+    private String scoringTime;
 }

@@ -11,6 +11,7 @@ public class PlayerMatchMapper {
                 .id(player.getId())
                 .name(player.getName())
                 .post(player.getPost())
+                .team(player.getTeam().getName())
                 .build();
     }
 }

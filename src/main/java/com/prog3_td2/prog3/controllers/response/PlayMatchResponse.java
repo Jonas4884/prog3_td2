@@ -14,4 +14,5 @@ public class PlayMatchResponse {
     private Long id;
     private String name;
     private String post;
+    private String team;
 }

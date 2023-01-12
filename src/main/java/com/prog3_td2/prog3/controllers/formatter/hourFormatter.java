@@ -20,4 +20,8 @@ public class hourFormatter {
        LocalDate localDate1 = localDateTime.toLocalDate();
         return   localDate1.toString()+" "+hour+":"+minute+":"+second;
     }
+
+    public static String customScore(LocalDateTime localDateTime){
+        return localDateTime.getMinute()+"``";
+    }
 }

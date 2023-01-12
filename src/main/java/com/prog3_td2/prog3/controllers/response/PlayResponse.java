@@ -19,5 +19,5 @@ public class PlayResponse {
     private TeamResponse Home;
     private TeamResponse Away;
 
-    private List<Score> score;
+    private List<ScoreResponse> score;
 }
