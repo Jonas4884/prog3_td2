@@ -19,6 +19,7 @@ create table if not exists player (
     id serial,
     name varchar,
     number integer unique,
+    post varchar,
     team_entity_id integer,
     primary key(id),
     constraint fk_team foreign key(team_entity_id) references team(id)

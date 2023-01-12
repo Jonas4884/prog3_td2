@@ -12,28 +12,17 @@ insert into sponsor (id, name) values (4, 'Toyota');
 insert into sponsor (id, name) values (5, 'Pepsi');
 alter sequence sponsor_id_seq restart with 6;
 
-insert into player (id, name, number,team_entity_id) values (1, 'Gareth Bale',12 , 1);
-insert into player (id, name, number, team_entity_id) values (2, 'Modric', 10, 2);
-insert into player (id, name, number, team_entity_id) values (3, 'lionnel messi', 20, 1);
-insert into player (id, name, number, team_entity_id) values (4, 'ronaldo', 25, 2);
-insert into player (id, name, number, team_entity_id) values (5, 'ronaldinho', 30, 3);
-insert into player (id, name, number, team_entity_id) values (6, 'kaka', 80, 2);
-insert into player (id, name, number, team_entity_id) values (7, 'rakitic', 89, 3);
-insert into player (id, name, number, team_entity_id) values (8, 'dybala', 23, 2);
-insert into player (id, name, number, team_entity_id) values (9, 'Pedro', 26, 1);
-insert into player (id, name, number, team_entity_id) values (10, 'Démbélé', 90, 4);
-insert into player (id, name, number,team_entity_id) values (11, 'Alvarez', 03, 5);
-insert into player (id, name, number,team_entity_id) values (12, 'Di maria', 18, 5);
-insert into player (id, name, number,team_entity_id) values (13, 'Bolida', 52, 5);
-insert into player (id, name, number,team_entity_id) values (14, 'Anicet', 16, 5);
-insert into player (id, name, number,team_entity_id) values (15, 'Neymar Jr', 19, 5);
-insert into player (id, name, number,team_entity_id) values (16, 'Ter testgen', 00, 5);
-insert into player (id, name, number,team_entity_id) values (17, 'morata', 28, 5);
-insert into player (id, name, number,team_entity_id) values (18, 'Nkunku', 35, 5);
-insert into player (id, name, number,team_entity_id) values (19, 'Drogba', 94, 5);
-insert into player (id, name, number,team_entity_id) values (20, 'Lagazette', 31, 5);
-insert into player (id, name, number,team_entity_id) values (21, 'Carolus', 55, 5);
-insert into player (id, name, number,team_entity_id) values (22, 'Jorghino', 51, 5);
+insert into player (id, name, number,post,team_entity_id) values (1, 'Gareth Bale',12 ,'GK', 1);
+insert into player (id, name, number,post, team_entity_id) values (2, 'Modric', 10,'LF', 2);
+insert into player (id, name, number,post, team_entity_id) values (3, 'lionnel messi', 20,'CF', 1);
+insert into player (id, name, number,post, team_entity_id) values (4, 'ronaldo', 25,'LF', 2);
+insert into player (id, name, number,post, team_entity_id) values (5, 'ronaldinho', 30,'CAM', 3);
+insert into player (id, name, number,post, team_entity_id) values (6, 'kaka', 80,'CB' ,2);
+insert into player (id, name, number,post, team_entity_id) values (7, 'rakitic', 89,'RB', 3);
+insert into player (id, name, number,post, team_entity_id) values (8, 'dybala', 23,'LB', 2);
+insert into player (id, name, number,post, team_entity_id) values (9, 'Pedro', 26,'CM', 1);
+insert into player (id, name, number,post ,team_entity_id) values (10, 'Démbélé', 90,'RW', 4);
+
 
 alter sequence player_id_seq restart with 23;
 

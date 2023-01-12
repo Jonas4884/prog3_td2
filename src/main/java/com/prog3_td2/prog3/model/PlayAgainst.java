@@ -28,4 +28,7 @@ public class PlayAgainst {
     @OneToOne
     @JoinColumn(name = "team_2_id",foreignKey = @ForeignKey(name = "fk_team2"))
     private TeamEntity team2;
+
+    @OneToOne
+    private Score score;
 }

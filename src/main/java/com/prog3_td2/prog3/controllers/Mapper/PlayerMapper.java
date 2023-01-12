@@ -8,6 +8,7 @@ public class PlayerMapper {
         return PlayerResponse.builder()
                 .id(playerEntity.getId())
                 .name(playerEntity.getName())
+                .post(playerEntity.getPost())
                 .build();
     }
 }
