@@ -12,5 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PlayMatchResponse {
     private Long id;
-    private String Name;
+    private String name;
+    private String post;
 }

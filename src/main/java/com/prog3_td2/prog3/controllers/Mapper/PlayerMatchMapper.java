@@ -9,7 +9,8 @@ public class PlayerMatchMapper {
     public static PlayMatchResponse toRest(PlayerEntity player){
         return PlayMatchResponse.builder()
                 .id(player.getId())
-                .Name(player.getName())
+                .name(player.getName())
+                .post(player.getPost())
                 .build();
     }
 }
