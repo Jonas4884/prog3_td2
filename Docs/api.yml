@@ -106,23 +106,32 @@ components:
           $ref: '#/components/schemas/Team'
         Away:
           $ref: '#/components/schemas/Team'
-        datetime:
+        Datetime:
           type: string
           format: date-time
-        score:
+        Stadium :
+          type : string
+        Score:
           $ref: '#/components/schemas/Score'
-        goal:
-          type: array
-          items:
-            $ref: '#/components/schemas/Goal'
+        Scorer:
+          $ref : '#/components/schemas/Scorer'
     Score:
       type: object
       properties:
         id:
           type: integer
-        team a:
-          type: string
-        team b:
-          type: string
+        team_a_score:
+          type: integer
+        team_b_score:
+          type: integer
+    Scorer:
+      type : object
+      properties:
+        id :
+          type : integer
+        player:
+          $ref:  '#/components/schemas/Player'
+        ScoringTime :
+          type: integer
 
 
