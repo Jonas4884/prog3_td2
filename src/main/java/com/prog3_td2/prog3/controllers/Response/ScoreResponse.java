@@ -1,4 +1,4 @@
-package com.prog3_td2.prog3.controllers.response;
+package com.prog3_td2.prog3.controllers.Response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
-public class PlayerResponse {
+public class ScoreResponse {
     private Long id;
-    private String name;
-    private String post;
+
+    private PlayMatchResponse scorer;
+
+    private String scoringTime;
 }

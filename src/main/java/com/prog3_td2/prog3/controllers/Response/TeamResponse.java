@@ -1,6 +1,5 @@
-package com.prog3_td2.prog3.controllers.response;
+package com.prog3_td2.prog3.controllers.Response;
 
-import com.prog3_td2.prog3.controllers.Mapper.PlayerMatchMapper;
 import com.prog3_td2.prog3.model.SponsorEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

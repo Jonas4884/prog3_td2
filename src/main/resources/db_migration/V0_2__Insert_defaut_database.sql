@@ -18,9 +18,9 @@ insert into goal_entity (id) values (3);
 
 
 insert into player (id, name, number,post,team_entity_id) values (1, 'Gareth Bale',12 ,'GK', 1);
-insert into player (id, name, number,post, team_entity_id) values (2, 'Modric', 10,'LF', 2);
+insert into player (id, name, number,post, team_entity_id) values (2, 'Modric', 10,'GK', 1);
 insert into player (id, name, number,post, team_entity_id) values (3, 'lionnel messi', 20,'CF', 1);
-insert into player (id, name, number,post, team_entity_id) values (4, 'ronaldo', 25,'LF', 2);
+insert into player (id, name, number,post, team_entity_id) values (4, 'ronaldo', 25,'LF', 3);
 insert into player (id, name, number,post, team_entity_id) values (5, 'ronaldinho', 30,'CAM', 3);
 insert into player (id, name, number,post, team_entity_id) values (6, 'kaka', 80,'CB' ,2);
 insert into player (id, name, number,post, team_entity_id) values (7, 'rakitic', 89,'RB', 3);
@@ -62,9 +62,9 @@ insert into have (sponsor_id, team_id) values (5, 2);
 
 
 insert into score (id,player_id,goal_id,scoring_time) values (1,2,1,'2022/10/18 20:25:20');
-insert into score (id,player_id,goal_id,scoring_time) values (1,3,1,'2022/10/18 20:25:20');
-insert into score (id,player_id,goal_id,scoring_time) values (2,1,2,'2022/10/18 20:25:20');
-insert into score (id,player_id,goal_id,scoring_time) values (2,4,1,'2022/10/18 20:25:20');
-insert into score (id,player_id,goal_id,scoring_time) values (3,2,1,'2022/10/18 20:25:20');
-insert into score (id,player_id,goal_id,scoring_time) values (3,3,2,'2022/10/18 20:25:20');
+insert into score (id,player_id,goal_id,scoring_time) values (1,3,1,'2022/10/18 20:58:20');
+insert into score (id,player_id,goal_id,scoring_time) values (2,1,2,'2022/10/18 20:23:20');
+insert into score (id,player_id,goal_id,scoring_time) values (2,4,1,'2022/10/18 20:52:20');
+insert into score (id,player_id,goal_id,scoring_time) values (3,2,1,'2022/10/18 20:52:20');
+insert into score (id,player_id,goal_id,scoring_time) values (3,3,2,'2022/10/18 20:33:20');
 

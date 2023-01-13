@@ -1,18 +1,16 @@
-package com.prog3_td2.prog3.controllers.response;
+package com.prog3_td2.prog3.controllers.Response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
-public class ScoreResponse {
+public class PlayerResponse {
     private Long id;
-    private PlayMatchResponse scorer;
-
-    private String scoringTime;
+    private String name;
+    private String post;
 }

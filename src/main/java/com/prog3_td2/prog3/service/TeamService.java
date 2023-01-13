@@ -1,8 +1,7 @@
 package com.prog3_td2.prog3.service;
 
 import com.prog3_td2.prog3.controllers.Mapper.PlayerMatchMapper;
-import com.prog3_td2.prog3.controllers.Mapper.SponsorisedMapper;
-import com.prog3_td2.prog3.controllers.response.TeamResponse;
+import com.prog3_td2.prog3.controllers.Response.TeamResponse;
 import com.prog3_td2.prog3.model.PlayAgainst;
 import com.prog3_td2.prog3.model.TeamEntity;
 import com.prog3_td2.prog3.repository.PLayAgainstRepository;
@@ -10,7 +9,6 @@ import com.prog3_td2.prog3.repository.TeamRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -19,6 +17,8 @@ public class TeamService {
     private final TeamRepository teamRepository;
     private final PLayAgainstRepository repository;
     public List<PlayAgainst> getAllMatch(){
+
+
         return  repository.findAll();
     }
 

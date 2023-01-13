@@ -1,6 +1,6 @@
 package com.prog3_td2.prog3.controllers.Mapper;
 
-import com.prog3_td2.prog3.controllers.response.PlayerResponse;
+import com.prog3_td2.prog3.controllers.Response.PlayerResponse;
 import com.prog3_td2.prog3.model.PlayerEntity;
 
 public class PlayerMapper {
