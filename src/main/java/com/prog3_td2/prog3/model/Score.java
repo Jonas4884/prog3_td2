@@ -24,6 +24,10 @@ public class Score {
     @OneToOne
     public GoalEntity goal;
 
+    @Transient
+    private int team_1_score;
+    @Transient
+    private int team_2_score;
     @Column(name = "scoring_time")
     public LocalDateTime scoringTime;
 }

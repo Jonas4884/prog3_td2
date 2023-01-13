@@ -1,6 +1,6 @@
 package com.prog3_td2.prog3.controllers.Mapper;
 
-import com.prog3_td2.prog3.controllers.response.TeamResponse;
+import com.prog3_td2.prog3.controllers.Response.TeamResponse;
 import com.prog3_td2.prog3.model.TeamEntity;
 
 public class TeamMapper {

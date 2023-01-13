@@ -1,7 +1,7 @@
 package com.prog3_td2.prog3.controllers;
 
 import com.prog3_td2.prog3.controllers.Mapper.PlayerMapper;
-import com.prog3_td2.prog3.controllers.response.PlayerResponse;
+import com.prog3_td2.prog3.controllers.Response.PlayerResponse;
 import com.prog3_td2.prog3.service.PlayerService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

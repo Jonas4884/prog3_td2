@@ -1,6 +1,6 @@
 package com.prog3_td2.prog3.controllers.Mapper;
 
-import com.prog3_td2.prog3.controllers.response.SponsorResponse;
+import com.prog3_td2.prog3.controllers.Response.SponsorResponse;
 import com.prog3_td2.prog3.model.SponsorEntity;
 import lombok.Builder;
 

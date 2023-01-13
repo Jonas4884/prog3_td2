@@ -1,4 +1,4 @@
-package com.prog3_td2.prog3.controllers.response;
+package com.prog3_td2.prog3.controllers.Response;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
