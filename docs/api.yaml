@@ -1,0 +1,105 @@
+openapi: "3.0.3"
+info:
+  title: football
+  description: football
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /matches:
+    get:
+      tags:
+        - Matches
+      operationId: getMatches
+      summary: get all matches
+      responses:
+        200:
+          description: all the matches
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MatchResponse'
+components:
+  schemas:
+    MatchResponse:
+      allOf:
+        - $ref: '#/components/schemas/Record'
+      properties:
+        datetime:
+          type: string
+          format: date-time
+        score:
+          $ref: '#/components/schemas/MatchScore'
+        teamA:
+          $ref: '#/components/schemas/TeamResponse'
+        teamB:
+          $ref: "#/components/schemas/TeamResponse"
+        goalScorersA:
+          type: array
+          items:
+            $ref: '#/components/schemas/GoalResponse'
+        goalScorersB:
+          type: array
+          items:
+            $ref: '#/components/schemas/GoalResponse'
+    PlayerResponse:
+      allOf:
+        - $ref: '#/components/schemas/Record'
+      properties:
+        name:
+          type: string
+        isGoalKeeper:
+          type: boolean
+    Sponsor:
+      allOf:
+        - $ref: '#/components/schemas/Record'
+      properties:
+        name:
+          type: string
+    Team:
+      allOf:
+        - $ref: '#/components/schemas/Record'
+      properties:
+        name:
+          type: string
+
+    TeamResponse:
+      allOf:
+        - $ref: '#/components/schemas/Team'
+      properties:
+        players:
+          type: array
+          items:
+            $ref: '#/components/schemas/PlayerResponse'
+        sponsors:
+          type: array
+          items:
+            $ref: '#/components/schemas/Sponsor'
+    GoalResponse:
+      allOf:
+        - $ref: '#/components/schemas/Record'
+      properties:
+        scoringTime:
+          type: number
+        player:
+          $ref: '#/components/schemas/GoalScorer'
+    GoalScorer:
+      allOf:
+        - $ref: '#/components/schemas/Record'
+      properties:
+        name:
+          type: string
+    MatchScore:
+      type: object
+      properties:
+        teamA:
+          type: number
+        teamB:
+          type: number
+    Record:
+      type: object
+      properties:
+        id:
+          type: number
