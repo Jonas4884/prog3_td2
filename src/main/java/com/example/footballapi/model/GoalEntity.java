@@ -27,5 +27,5 @@ public class GoalEntity {
 
     @OneToOne
     @JoinColumn(name = "match_id")
-    private MatchEntity match;
+    private PlayAgainst match;
 }

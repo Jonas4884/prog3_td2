@@ -5,12 +5,12 @@ import com.example.footballapi.model.PlayerEntity;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PlayerRestMapper {
-    public PlayerResponse toRest(PlayerEntity domain) {
+public class PlayerMapper {
+    public PlayerResponse toRest(PlayerEntity playerEntity) {
         return PlayerResponse.builder()
-                .id(domain.getId())
-                .name(domain.getName())
-                .isGoalKeeper(domain.isGoalKeeper())
+                .id(playerEntity.getId())
+                .name(playerEntity.getName())
+                .isGoalKeeper(playerEntity.isGoalKeeper())
                 .build();
     }
 }

@@ -5,13 +5,11 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Map;
 
 @Builder
 @Data
 @AllArgsConstructor
-public class MatchResponse {
+public class PlayResponse {
     private long id;
     private LocalDateTime datetime;
 

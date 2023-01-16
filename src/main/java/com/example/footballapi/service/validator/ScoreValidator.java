@@ -15,7 +15,7 @@ public class ScoreValidator implements Consumer<ScoreEntity> {
     public void accept(ScoreEntity scoreEntity) throws HttpClientErrorException {
         if (scoreEntity.getPlayer().isGoalKeeper()) {
             throw HttpClientErrorException.create(HttpStatus.BAD_REQUEST,
-                    "goal keeper couldn't score any goal",
+                    "This player can't score,he's a goal keeper",
                     new HttpHeaders(),
                     null,
                     Charset.defaultCharset());

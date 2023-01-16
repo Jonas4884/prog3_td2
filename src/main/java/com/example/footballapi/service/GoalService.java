@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class GoalService {
     private final GoalRepository repository;
 
-    public GoalEntity getByMatchId(long matchId){
-        return repository.findByMatchId(matchId);
+    public GoalEntity getMatchById(long id){
+        return repository.findByMatchId(id);
     }
 }

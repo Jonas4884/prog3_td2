@@ -18,6 +18,7 @@ CREATE TABLE player
     id serial primary key,
     name varchar(100) not null,
     number int not null,
+     is_goal_keeper bool default false,
     team_id serial references team(id)
 );
 
@@ -32,4 +33,17 @@ CREATE TABLE team_have_sponsor
     team_id serial references team(id),
     sponsor_id serial references sponsor(id),
     PRIMARY KEY (team_id, sponsor_id)
+);
+
+CREATE TABLE goal (
+    id serial primary key not null,
+    match_id int references team_play_against(id)
+);
+
+CREATE TABLE player_score_goal (
+    id serial primary key,
+    player_id int references player(id),
+    goal_id int references goal(id),
+    scoring_time int not null,
+    is_og bool
 );

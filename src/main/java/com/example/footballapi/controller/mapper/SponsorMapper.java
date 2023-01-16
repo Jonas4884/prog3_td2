@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 @AllArgsConstructor
-public class SponsorRestMapper {
-    SponsorResponse toRest(SponsorEntity domain) {
+public class SponsorMapper {
+    SponsorResponse toRest(SponsorEntity sponsorEntity) {
         return SponsorResponse.builder()
-                .id(domain.getId())
-                .name(domain.getName())
+                .id(sponsorEntity.getId())
+                .name(sponsorEntity.getName())
                 .build();
     }
 }

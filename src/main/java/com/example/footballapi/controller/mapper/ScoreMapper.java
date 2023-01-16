@@ -7,15 +7,15 @@ import org.springframework.stereotype.Component;
 
 @Component
 @AllArgsConstructor
-public class ScoreRestMapper {
-    private final PlayerRestMapper playerRestMapper;
+public class ScoreMapper {
+    private final PlayerMapper playerMapper;
 
-    public ScoreResponse toRest(ScoreEntity domain) {
+    public ScoreResponse toRest(ScoreEntity score) {
         return ScoreResponse.builder()
-                .id(domain.getId())
-                .scoreTime(domain.getScoringTime())
-                .isOG(domain.isOG())
-                .player(playerRestMapper.toRest(domain.getPlayer()))
+                .id(score.getId())
+                .scoreTime(score.getScoringTime())
+                .isOG(score.isOG())
+                .player(playerMapper.toRest(score.getPlayer()))
                 .build();
     }
 }

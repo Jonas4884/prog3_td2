@@ -1,7 +1,7 @@
 package com.example.footballapi.controller;
 
-import com.example.footballapi.controller.mapper.MatchRestMapper;
-import com.example.footballapi.controller.model.MatchResponse;
+import com.example.footballapi.controller.mapper.PlayMatchMapper;
+import com.example.footballapi.controller.model.PlayResponse;
 import com.example.footballapi.service.MatchService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,10 +15,10 @@ import java.util.List;
 @RequestMapping("matches")
 public class MatchController {
     private final MatchService service;
-    private final MatchRestMapper mapper;
+    private final PlayMatchMapper mapper;
 
     @GetMapping
-    public List<MatchResponse> getAll() {
-        return service.getAll().stream().map(mapper::toRest).toList();
+    public List<PlayResponse> getAll() {
+        return service.getAllMatch().stream().map(mapper::toRest).toList();
     }
 }

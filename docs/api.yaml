@@ -20,7 +20,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/MatchResponse'
+                  $ref: '#/components/schemas/PlayResponse'
 components:
   schemas:
     MatchResponse:

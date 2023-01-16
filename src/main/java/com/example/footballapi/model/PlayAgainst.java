@@ -23,7 +23,7 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @NoArgsConstructor
 @Entity
 @Table(name = "team_play_against")
-public class MatchEntity {
+public class PlayAgainst {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private long id;
